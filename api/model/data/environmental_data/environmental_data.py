@@ -3,7 +3,7 @@ import numpy as np
 from data.constants import metric_constants
 
 def get_daily_rainfall_data(start_year=2009, end_year=2018):
-    df = pd.read_csv('/Users/alexa/nutrient-models/ppf-model-2.0/server/data/environmental_data/proserpineRainfallData.csv')
+    df = pd.read_csv('/Users/alexa/projects/prawn-app/api/data/environmental_data/proserpineRainfallData.csv')
     df = df[(df['Year'] >= start_year) & (df['Year'] <= end_year)]
     df = df[(df['Month'] != 2) | (df['Day'] != 29)]  # remove leap year day
     df = df[['Month', 'Day', 'Rainfall']]
@@ -15,7 +15,7 @@ def get_daily_rainfall_data(start_year=2009, end_year=2018):
     return daily_rain_production_year
 
 def get_daily_evaporation_data():
-    df = pd.read_csv('/Users/alexa/nutrient-models/ppf-model-2.0/server/data/environmental_data/proserpineEvaporationData.csv')
+    df = pd.read_csv('/Users/alexa/projects/prawn-app/api/data/environmental_data/proserpineEvaporationData.csv')
     df['evaporation'].fillna(value=6.9, inplace=True) # replace missing data with avg
     daily_evaporation = df['evaporation'].values # starting 01/01
 
