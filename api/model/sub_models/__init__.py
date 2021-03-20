@@ -1,2 +1,3 @@
-from model.sub_models.farm_production import FarmProduction
-from model.sub_models.production_pond import ProductionPond
+from .farm_production import FarmProduction
+from .production_pond import ProductionPond
+from .whole_farm import WholeFarm

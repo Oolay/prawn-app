@@ -9,7 +9,8 @@ from data.constants import (
     microalgae_constants,
     settlement_pond_constants,
 )
-from model.sub_models import FarmProduction, ProductionPond
+from .production_pond import ProductionPond
+from .farm_production import FarmProduction
 from utils import nutrient_matrix_to_dataframe, plot_nitrogen_components, plot_phosphorous_components, plot_total_suspended_solids
 
 class WholeFarm:

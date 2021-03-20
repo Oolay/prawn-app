@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 from data import ParameterStore
-from model import WholeFarm
+from sub_models import WholeFarm
 from utils import nutrient_matrix_to_dataframe
 
 input_parameters = {

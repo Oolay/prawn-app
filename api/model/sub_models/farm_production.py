@@ -1,8 +1,7 @@
 import numpy as np
 
 from data import sate_variables_names, metric_constants, biological_constants, aquaculture_pond_constants, microalgae_constants
-from model.sub_models.production_pond import ProductionPond
-
+from .production_pond import ProductionPond
 
 class FarmProduction:
     def __init__(self, parameter_store, model_rain_and_evaporation_at_pond_level=False):
